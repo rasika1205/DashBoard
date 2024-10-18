@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
+    </head>
+    <body>
+        <div class="sidebar_menu">
+            <div class="header1">
+                <div class="icon">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div class="logo" id="logo_a">
+                    <a href="#"><u>XYZ.Corp</u></a>    
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li id="dash">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-duotone fa-solid fa-chart-simple"></i>
+                        <a href="#">Leaderboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <a href="#">Order</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <a href="#">Sales Report</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-message"></i>
+                        <a href="#">Messages</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <a href="#">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header">
+            <h1>XYZ</h1>
+            <div class="searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Something...">
+            </div>
+            <div class="langbox">Eng(US)
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="profile">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <h3>Username</h3>
+                <input type="checkbox" id="check">
+                <label for="check">
+                    <i class="fa-solid fa-angle-down"></i>
+                </label>
+                <div class="smallmenu">
+                    <ul>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="todays_sales">
+                <h2 class="heading">Today's Sales</h2>
+                <p class="info">Sales Summary</p>
+                <div class="cards">
+                    <div class="card1">
+                        <p class="card-title">$1k</p>
+                        <p class="card-heading">Total Sales</p>
+                        <p class="card-info">+9% from yesterday</p>
+                    </div>
+                    <div class="card2">
+                        <p class="card-title">300</p>
+                        <p class="card-heading">Total Order</p>
+                        <p class="card-info">+5% from yesterday</p>
+                    </div>
+                    <div class="card3">
+                        <p class="card-title">5</p>
+                        <p class="card-heading">Product Sold</p>
+                        <p class="card-info">+1.2% from yesterday</p>
+                    </div>
+                    <div class="card4">
+                        <p class="card-title">8</p>
+                        <p class="card-heading">New Customers</p>
+                        <p class="card-info">+0.5% from yesterday</p>
+                    </div>
+                    
+                </div>
+                <button class="btn">Export</button>
+            </div>
+            <div class="visitor_insights">
+                <h2>Visitor Insights</h2>
+                <canvas id="myChart">
+                </canvas>
+            </div>
+            <div class="total_revenue">
+                <h2>Total Revenue in Thousands</h2>
+                <canvas id="myChart2"></canvas>
+            </div>
+            <div class="customer_satisfaction">
+                <h2>Customer Satisfaction</h2>
+                <canvas id="myChart3"></canvas>
+            </div>
+            <div class="targetvsreality">
+                <h2>Target vs Reality</h2>
+                <canvas id="myChart4"></canvas>
+            </div>
+            <div class="top_products">
+                <h2>Top Products</h2>
+                <canvas id="myChart5"></canvas>
+            </div>
+            <div class="quantityOfProducts">
+                <h2>Quantity of Products Available</h2>
+                <p>Serial number of products is wriiten on x axis</p>
+                <canvas id="myChart6"></canvas>
+            </div>
+            <div class="listOfProducts">
+                <h2>Products Available</h2>
+                <p>You can search for the products here in the following list</p>
+                <input type="text" placeholder="search for product here" id="searchinp">
+                <button id="search">Search</button>
+                <p>You can add some products in the list</p>
+                <input type="text" placeholder="add more products" id="addinp">
+                <button id="add">Add</button>
+                <ol>
+                    <li id="listItems">Princess Bag </li>
+                    <li id="listItems">Show Piece</li>
+                    <li id="listItems">Smart Phone</li>
+                    <li id="listItems">Smart Watch</li>
+                    <li id="listItems">Headphone</li>
+                    <li id="listItems">Dinning Table</li>
+                    <li id="listItems">Dinner Set</li>
+                    <li id="listItems">Wallet</li>
+                    <li id="listItems">Fish Bowl</li>
+                </ol>
+                <p id="searchPrint"></p>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
